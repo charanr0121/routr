@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Main
+{% endblock %}
+{% block main %}
+
+<img src="static/name2.png" alt="logo" class="center">
+
+<h3 class="center" >
+    Select the Store you will be shopping at:
+</h3>
+<select id="store_select" name="store selection:" class="center">
+<option value="cvs">
+    CVS
+</option>
+<option value="walmart">
+    Walmart
+</option>
+</select>
+<br>
+<p class="center" style="font-size: 12pt;">
+    Place your shopping cart items in the textbox below followed by an enter:
+</p>
+   
+    <textarea  rows="10" id="list" class="input100 center"  name="message" placeholder="Enter Item Here"></textarea>
+    <span class="focus-input100"></span>
+    <br>
+
+<button type="submit" onclick="submit();" id="submitbutton"class="center button" >
+    rout me!
+</button>
+<button type="submit"  id="emptybutton"class="footer button" style="background-color: rgb(179, 175, 175);" >
+    empty cart
+</button>
+<script>
+ function submit(){
+   
+    if(document.getElementById("list").value < 1){
+        window.alert("Shopping cart is blank! Please enter at least 1 item!");
+        return false;
+
+    }
+ }   
+</script>
+{% endblock %}
