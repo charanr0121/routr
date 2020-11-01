@@ -58,7 +58,6 @@ def calc(points):
 
 def algo(cart, start, checkout):
     #points = [toys, sports, dairy, cannedFood, frozen, fruitsAndVeggies, intimateApp, hardware, houseware]
-    print("FUUUCK")
     perms = list(itertools.permutations(cart))
     for i in perms:
         i = list(i)
